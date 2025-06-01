@@ -12,7 +12,7 @@ Should work on `dmenu`, `dwm`, `slstatus` and `st`.
 
 ```bash
 make clean
-sudo make install -j${number_of_cores}https://github.com/mbadolato/iTerm2-Color-Schemes
+sudo make install -j${number_of_cores}
 ```
 
 # Uninstallation
