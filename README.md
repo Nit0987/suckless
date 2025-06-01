@@ -25,5 +25,5 @@ sudo make uninstall
 
 # Recommended
 
-https://github.com/AlexTheGreat600/pulsar  
-https://github.com/mbadolato/iTerm2-Color-Schemes
+Pulsar Scripts: https://github.com/AlexTheGreat600/pulsar  
+Xresources Themes: https://github.com/mbadolato/iTerm2-Color-Schemes
