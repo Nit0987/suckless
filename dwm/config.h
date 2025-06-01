@@ -111,6 +111,7 @@ static char *colors[][ColCount] = {
 };
 
 static const char *const autostart[] = {
+    "picom", NULL,
     "slstatus", NULL,
     "nitrogen", "--restore", NULL,
     NULL /* terminate */
