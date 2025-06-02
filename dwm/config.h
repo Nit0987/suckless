@@ -248,12 +248,41 @@ static const char *dmenucmd[] = {
     "-sf", selfgcolor,
     NULL
 };
-static const char *termcmd[]  = { "st", NULL };
 
+static const char* termcmd[]  = { "st", NULL };
 static const char* firefoxcmd[] = {"firefox", NULL};
+static const char* filemancmd[] = {"pcmanfm-qt", NULL};
+
+static const char* pulsar_music_cmd[] = {"pulsar-music", NULL};
+static const char* pulsar_videos_cmd[] = {"pulsar-videos", NULL};
+static const char* pulsar_sources_cmd[] = {"pulsar-sources", NULL};
+static const char* pulsar_pictures_cmd[] = {"pulsar-pictures", NULL};
+static const char* pulsar_projects_cmd[] = {"pulsar-projects", NULL};
+static const char* pulsar_manpages_cmd[] = {"pulsar-manpages", NULL};
+static const char* pulsar_websearch_cmd[] = {"pulsar-websearch", NULL};
+static const char* pulsar_wallpapers_cmd[] = {"pulsar-wallpapers", NULL};
+
+static const char* tfilemancmd[] = {"st", "-e", "lfrun", NULL};
+static const char* tbrowsercmd[] = {"st", "-e", "elinks", NULL};
+
 static const Key on_empty_keys[] = {
-    /* modifier key            function                argument */
-    { 0,        XK_f,          spawn,                  {.v = firefoxcmd } },
+    /* modifier key                function            argument */
+    { 0,            XK_Return,     spawn,              {.v = termcmd } },
+    { 0,            XK_p,          spawn,              {.v = dmenucmd } },
+    { 0,            XK_b,          spawn,              {.v = firefoxcmd } },
+    { 0,            XK_f,          spawn,              {.v = filemancmd } },
+
+    { 0,            XK_n,          spawn,             { .v = pulsar_music_cmd } },
+    { 0,            XK_v,          spawn,             { .v = pulsar_videos_cmd } },
+    { 0,            XK_s,          spawn,             { .v = pulsar_sources_cmd } },
+    { 0,            XK_i,          spawn,             { .v = pulsar_pictures_cmd } },
+    { 0,            XK_p,          spawn,             { .v = pulsar_projects_cmd } },
+    { 0,            XK_m,          spawn,             { .v = pulsar_manpages_cmd } },
+    { 0,            XK_q,          spawn,             { .v = pulsar_websearch_cmd } },
+    { 0,            XK_w,          spawn,             { .v = pulsar_wallpapers_cmd } },
+
+    { ShiftMask,    XK_b,          spawn,              {.v = tbrowsercmd } },
+    { ShiftMask,    XK_f,          spawn,              {.v = tfilemancmd } },
 };
 
 /*
